@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <Label layoutX="13.0" layoutY="18.0" text="Knapsack">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="14.0" text="Crossover" />
+      <Label layoutX="300.0" layoutY="14.0" text="Mutation" />
+      <ComboBox fx:id="mutationComboBox" layoutX="300.0" layoutY="36.0" prefHeight="27.0" prefWidth="73.0" />
+      <Label layoutX="500.0" layoutY="14.0" text="Selection" />
+      <ComboBox fx:id="selectionComboBox" layoutX="500.0" layoutY="36.0" prefHeight="27.0" prefWidth="93.0" />
+      <Label layoutX="604.0" layoutY="14.0" text="Volume" />
+      <Button fx:id="startButton" layoutX="697.0" layoutY="36.0" mnemonicParsing="false" text="Start" />
+      <Button fx:id="stepButton" layoutX="756.0" layoutY="36.0" mnemonicParsing="false" text="Step" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="27.0" layoutX="9.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="781.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#838282" height="27.0" layoutX="447.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="162.0" />
+      <Label layoutX="15.0" layoutY="121.0" text="Iteration: 6318 | Best value: 10317 | #C: 1174 | #M: 12" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="27.0" layoutX="9.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="781.0" />
+      <Label fx:id="runtimeLabel" layoutX="24.0" layoutY="663.0" text="Runtime: 07:02 minutes" />
+      <Label layoutX="140.0" layoutY="169.0" text="Knapsack" />
+      <Label layoutX="498.0" layoutY="169.0" text="Available Items" />
+       <TextField fx:id="ai1TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="1" />
+       <TextField fx:id="ai2TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="2" />
+       <TextField fx:id="ai3TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="3" />
+       <TextField fx:id="ai4TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="4" />
+       <TextField fx:id="ai5TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="5" />
+       <TextField fx:id="ai6TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="6" />
+       <TextField fx:id="ai7TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="7" />
+       <TextField fx:id="ai8TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="8" />
+       <TextField fx:id="ai9TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="9" />
+       <TextField fx:id="ai10TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="10" />
+       <TextField fx:id="ai11TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="11" />
+       <TextField fx:id="ai12TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="12" />
+       <TextField fx:id="ai13TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="13" />
+       <TextField fx:id="ai14TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="14" />
+       <TextField fx:id="ai15TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="15" />
+       <TextField fx:id="ai16TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="16" />
+       <TextField fx:id="ai17TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="17" />
+       <TextField fx:id="ai18TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="18" />
+       <TextField fx:id="ai19TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="19" />
+       <TextField fx:id="ai20TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" text="20" />
+       <TextField fx:id="ai21TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="21" />
+       <TextField fx:id="ai22TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="22" />
+       <TextField fx:id="ai23TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="23" />
+       <TextField fx:id="ai24TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="24" />
+       <TextField fx:id="ai25TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="25" />
+       <TextField fx:id="ai26TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="26" />
+       <TextField fx:id="ai27TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="27" />
+       <TextField fx:id="ai28TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="28" />
+       <TextField fx:id="ai29TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="29" />
+       <TextField fx:id="ai30TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" text="30" />
+       <TextField fx:id="ai31TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="31" />
+       <TextField fx:id="ai32TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="32" />
+       <TextField fx:id="ai33TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="33" />
+       <TextField fx:id="ai34TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="34" />
+       <TextField fx:id="ai35TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="35" />
+       <TextField fx:id="ai36TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="36" />
+       <TextField fx:id="ai37TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="37" />
+       <TextField fx:id="ai38TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="38" />
+       <TextField fx:id="ai39TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="39" />
+       <TextField fx:id="ai40TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" text="40" />
+       <TextField fx:id="ai41TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="41" />
+       <TextField fx:id="ai42TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="42" />
+       <TextField fx:id="ai43TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="43" />
+       <TextField fx:id="ai44TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="44" />
+       <TextField fx:id="ai45TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="45" />
+       <TextField fx:id="ai46TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="46" />
+       <TextField fx:id="ai47TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="47" />
+       <TextField fx:id="ai48TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="48" />
+       <TextField fx:id="ai49TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="49" />
+       <TextField fx:id="ai50TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" text="50" />
+       <TextField fx:id="ai51TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="51" />
+       <TextField fx:id="ai52TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="52" />
+       <TextField fx:id="ai53TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="53" />
+       <TextField fx:id="ai54TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="54" />
+       <TextField fx:id="ai55TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="55" />
+       <TextField fx:id="ai56TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="56" />
+       <TextField fx:id="ai57TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="57" />
+       <TextField fx:id="ai58TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="58" />
+       <TextField fx:id="ai59TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="59" />
+       <TextField fx:id="ai60TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" text="60" />
+       <TextField fx:id="ai61TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="61" />
+       <TextField fx:id="ai62TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="62" />
+       <TextField fx:id="ai63TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="63" />
+       <TextField fx:id="ai64TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="64" />
+       <TextField fx:id="ai65TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="65" />
+       <TextField fx:id="ai66TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="66" />
+       <TextField fx:id="ai67TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="67" />
+       <TextField fx:id="ai68TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="68" />
+       <TextField fx:id="ai69TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="69" />
+       <TextField fx:id="ai70TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" text="70" />
+       <TextField fx:id="ai71TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="71" />
+       <TextField fx:id="ai72TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="72" />
+       <TextField fx:id="ai73TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="73" />
+       <TextField fx:id="ai74TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="74" />
+       <TextField fx:id="ai75TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="75" />
+       <TextField fx:id="ai76TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="76" />
+       <TextField fx:id="ai77TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="77" />
+       <TextField fx:id="ai78TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="78" />
+       <TextField fx:id="ai79TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="79" />
+       <TextField fx:id="ai80TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" text="80" />
+       <TextField fx:id="ai81TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="81" />
+       <TextField fx:id="ai82TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="82" />
+       <TextField fx:id="ai83TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="83" />
+       <TextField fx:id="ai84TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="84" />
+       <TextField fx:id="ai85TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="85" />
+       <TextField fx:id="ai86TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="86" />
+       <TextField fx:id="ai87TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="87" />
+       <TextField fx:id="ai88TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="88" />
+       <TextField fx:id="ai89TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="89" />
+       <TextField fx:id="ai90TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" text="90" />
+       <TextField fx:id="ai91TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="91" />
+       <TextField fx:id="ai92TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="92" />
+       <TextField fx:id="ai93TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="93" />
+       <TextField fx:id="ai94TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="94" />
+       <TextField fx:id="ai95TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="95" />
+       <TextField fx:id="ai96TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="96" />
+       <TextField fx:id="ai97TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="97" />
+       <TextField fx:id="ai98TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="98" />
+       <TextField fx:id="ai99TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="99" />
+       <TextField fx:id="ai100TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" text="100" />
+       <TextField fx:id="ai101TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="101" />
+       <TextField fx:id="ai102TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="102" />
+       <TextField fx:id="ai103TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="103" />
+       <TextField fx:id="ai104TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="104" />
+       <TextField fx:id="ai105TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="105" />
+       <TextField fx:id="ai106TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="106" />
+       <TextField fx:id="ai107TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="107" />
+       <TextField fx:id="ai108TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="108" />
+       <TextField fx:id="ai109TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="109" />
+       <TextField fx:id="ai110TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" text="110" />
+       <TextField fx:id="ai111TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="111" />
+       <TextField fx:id="ai112TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="112" />
+       <TextField fx:id="ai113TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="113" />
+       <TextField fx:id="ai114TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="114" />
+       <TextField fx:id="ai115TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="115" />
+       <TextField fx:id="ai116TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="116" />
+       <TextField fx:id="ai117TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="117" />
+       <TextField fx:id="ai118TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="118" />
+       <TextField fx:id="ai119TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="119" />
+       <TextField fx:id="ai120TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" text="120" />
+       <TextField fx:id="ai121TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="121" />
+       <TextField fx:id="ai122TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="122" />
+       <TextField fx:id="ai123TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="123" />
+       <TextField fx:id="ai124TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="124" />
+       <TextField fx:id="ai125TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="125" />
+       <TextField fx:id="ai126TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="126" />
+       <TextField fx:id="ai127TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="127" />
+       <TextField fx:id="ai128TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="128" />
+       <TextField fx:id="ai129TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="129" />
+       <TextField fx:id="ai130TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" text="130" />
+       <TextField fx:id="ai131TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="131" />
+       <TextField fx:id="ai132TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="132" />
+       <TextField fx:id="ai133TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="133" />
+       <TextField fx:id="ai134TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="134" />
+       <TextField fx:id="ai135TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="135" />
+       <TextField fx:id="ai136TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="136" />
+       <TextField fx:id="ai137TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="137" />
+       <TextField fx:id="ai138TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="138" />
+       <TextField fx:id="ai139TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="139" />
+       <TextField fx:id="ai140TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" text="140" />
+       <TextField fx:id="ai141TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="141" />
+       <TextField fx:id="ai142TextField" alignment="CENTER" editable="false" layoutX="444.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="142" />
+       <TextField fx:id="ai143TextField" alignment="CENTER" editable="false" layoutX="479.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="143" />
+       <TextField fx:id="ai144TextField" alignment="CENTER" editable="false" layoutX="514.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="144" />
+       <TextField fx:id="ai145TextField" alignment="CENTER" editable="false" layoutX="549.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="145" />
+       <TextField fx:id="ai146TextField" alignment="CENTER" editable="false" layoutX="584.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="146" />
+       <TextField fx:id="ai147TextField" alignment="CENTER" editable="false" layoutX="619.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="147" />
+       <TextField fx:id="ai148TextField" alignment="CENTER" editable="false" layoutX="654.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="148" />
+       <TextField fx:id="ai149TextField" alignment="CENTER" editable="false" layoutX="689.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="149" />
+       <TextField fx:id="ai150TextField" alignment="CENTER" editable="false" layoutX="724.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" text="150" />
+       <TextField fx:id="k1TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k2TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k3TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k4TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k5TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k6TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k7TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k8TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k9TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k10TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="213.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k11TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k12TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k13TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k14TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k15TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="240.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k16TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k17TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k18TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k19TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k20TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="267.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k21TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k22TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k23TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k24TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k25TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="294.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k26TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k27TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k28TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k29TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k30TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="321.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k31TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k32TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k33TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k34TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k35TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="348.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k36TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k37TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k38TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k39TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k40TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="375.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k41TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k42TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k43TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k44TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k45TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="402.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k46TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k47TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k48TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k49TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k50TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="429.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k51TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k52TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k53TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k54TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k55TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="456.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k56TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k57TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k58TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k59TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k60TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="483.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k61TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k62TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k63TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k64TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k65TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="510.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k66TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k67TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k68TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k69TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k70TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="537.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k71TextField" alignment="CENTER" editable="false" layoutX="44.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k72TextField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k73TextField" alignment="CENTER" editable="false" layoutX="114.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k74TextField" alignment="CENTER" editable="false" layoutX="149.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" />
+       <TextField fx:id="k75TextField" alignment="CENTER" editable="false" layoutX="184.0" layoutY="564.0" prefHeight="27.0" prefWidth="35.0" />
+       <Label layoutX="18.0" layoutY="71.0" text="Name:" />
+       <Label layoutX="18.0" layoutY="90.0" text="MaxNumberOfIterations:" />
+      <Label fx:id="maximumNumberOfIterationsLabel" layoutX="200.0" layoutY="90.0" prefHeight="17.0" prefWidth="139.0" text="(Zahl)" />
+      <ComboBox fx:id="crossoverComboBox" layoutX="134.0" layoutY="36.0" prefHeight="27.0" prefWidth="73.0" />
+      <ComboBox fx:id="crossoverRatioComboBox" layoutX="221.0" layoutY="36.0" prefHeight="27.0" prefWidth="73.0" />
+      <ComboBox fx:id="mutationRatioComboBox" layoutX="376.0" layoutY="36.0" prefHeight="27.0" prefWidth="109.0" />
+      <ComboBox fx:id="volumeComboBox" layoutX="601.0" layoutY="36.0" prefHeight="27.0" prefWidth="73.0" />
+      <Label fx:id="nameLabel" layoutX="201.0" layoutY="71.0" prefHeight="17.0" prefWidth="169.0" text="Label" />
+      <TextArea fx:id="commandTextArea" editable="false" layoutX="46.0" layoutY="599.0" prefHeight="51.0" prefWidth="719.0" />
+      <TextField fx:id="commandTextField" layoutX="46.0" layoutY="599.0" prefHeight="51.0" prefWidth="719.0" />
+   </children>
+
+</AnchorPane>
