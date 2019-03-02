@@ -9,20 +9,19 @@ import javafx.scene.control.*;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.*;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
-import java.util.Date;
 
 
 public class Main extends Application {
@@ -40,9 +39,9 @@ public class Main extends Application {
 
         Label dropped = new Label("");
         VBox dragTarget = new VBox();
-        dragTarget.getChildren().addAll(label, dropped);
-        dragTarget.setOnDragOver(new EventHandler<DragEvent>() {
 
+        dragTarget.getChildren().addAll(label, dropped);
+        label.setOnDragOver(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 if (event.getGestureSource() != dragTarget
@@ -54,18 +53,16 @@ public class Main extends Application {
             }
         });
 
+        // lessons learned: NOT working with a stackpane, nothing was clickable
+        AnchorPane root = new AnchorPane();
 
-
-        StackPane root = new StackPane();
         // load scene
         root.getChildren().setAll(parent);
         // add 'drag and drop'
         root.getChildren().add(dragTarget);
 
-
         Scene scene = new Scene(root, 800.0, 770.0);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("Drag Test");
         primaryStage.setScene(scene);
 
         dragTarget.setOnDragDropped(new EventHandler<DragEvent>() {
@@ -113,21 +110,25 @@ public class Main extends Application {
                         maxNumberLabel.textProperty().setValue(jsonObject.get("maximumNumberOfIterations").toString());
 
 
-
-                        // todo: test: button is not clickable
                         Button startButton = (Button) scene.lookup("#startButton");
+                        // todo: fill start button
                         startButton.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent e) {
-                                System.out.println("test started");
+
+                            }
+                        });
+                        Button stepButton = (Button) scene.lookup("#stepButton");
+                        // todo: fill step button
+                        stepButton.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent e) {
+
                             }
                         });
 
-
-
                         // todo: get knapsackArray
                         int knapsackArray[] = {1,12,17};
-
                         int knapsackPosition = 1;
                         // disables available items if they exist in the knapsack array
                         for (int value : knapsackArray){
@@ -138,6 +139,7 @@ public class Main extends Application {
                             knapsackField.textProperty().setValue(Integer.toString(value));
                             knapsackPosition++;
                         }
+
                         // elapsed time
                         Label timerLabel = (Label) scene.lookup("#runtimeLabel");
                         long startTime = System.currentTimeMillis();
@@ -163,10 +165,6 @@ public class Main extends Application {
                         }.start();
 
 
-
-
-
-
                     } catch (IOException e) {
                         System.out.println(e);
                     }
@@ -180,13 +178,6 @@ public class Main extends Application {
                 event.consume();
             }
         });
-
-
-
-
-
-
-
         primaryStage.show();
     }
 
@@ -205,7 +196,7 @@ public class Main extends Application {
             Object object = parser
                     .parse(new FileReader(newFileName));
 
-            //convert Object to JSONObject
+            // convert Object to JSONObject
             JSONObject jsonObject = (JSONObject)object;
 
             return jsonObject;
@@ -220,12 +211,6 @@ public class Main extends Application {
             e.printStackTrace();
         }
         return null;
-
-
-            //Printing the values
-            //System.out.println("Mutation: " + mutation);
-       // }
-
     }
 
 
