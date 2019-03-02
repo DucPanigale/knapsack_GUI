@@ -52,9 +52,10 @@ public class Main extends Application {
                 }
                 event.consume();
             }
-
-
         });
+
+
+
         StackPane root = new StackPane();
         // load scene
         root.getChildren().setAll(parent);
@@ -66,8 +67,6 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.setTitle("Drag Test");
         primaryStage.setScene(scene);
-
-
 
         dragTarget.setOnDragDropped(new EventHandler<DragEvent>() {
             @Override
@@ -113,6 +112,19 @@ public class Main extends Application {
                         Label maxNumberLabel = (Label) scene.lookup("#maximumNumberOfIterationsLabel");
                         maxNumberLabel.textProperty().setValue(jsonObject.get("maximumNumberOfIterations").toString());
 
+
+
+                        // todo: test: button is not clickable
+                        Button startButton = (Button) scene.lookup("#startButton");
+                        startButton.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent e) {
+                                System.out.println("test started");
+                            }
+                        });
+
+
+
                         // todo: get knapsackArray
                         int knapsackArray[] = {1,12,17};
 
@@ -126,12 +138,9 @@ public class Main extends Application {
                             knapsackField.textProperty().setValue(Integer.toString(value));
                             knapsackPosition++;
                         }
-                        // todo: show elapsed time as runtime
+                        // elapsed time
                         Label timerLabel = (Label) scene.lookup("#runtimeLabel");
-                        //timerLabel.textProperty().setValue(jsonObject.get("name").toString());
                         long startTime = System.currentTimeMillis();
-                        //currentTimeMillis();
-
                         new AnimationTimer() {
                             @Override
                             public void handle(long now) {
@@ -150,13 +159,12 @@ public class Main extends Application {
                                 }
 
                                 timerLabel.setText(min + ":" + sec);
-
-
-
-
-
                             }
                         }.start();
+
+
+
+
 
 
                     } catch (IOException e) {
@@ -172,15 +180,7 @@ public class Main extends Application {
                 event.consume();
             }
         });
-        // todo: test: button is not clickable
-        Button startButton = (Button) scene.lookup("#startButton");
-        startButton.disableProperty().setValue(false);
-        startButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                System.out.println("Started TEST");
 
-            }
-        });
 
 
 
