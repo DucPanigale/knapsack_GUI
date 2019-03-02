@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -16,6 +17,7 @@
             <Font size="21.0" />
          </font>
       </Label>
+      <TextArea fx:id="commandTextArea" editable="false" layoutX="44.0" layoutY="605.0" prefHeight="48.0" prefWidth="757.0" style="-fx-text-box-border: transparent; -fx-faint-focus-color: transparent; -fx-focus-color: transparent; -fx-background-insets: 0, 0 0 1 00, 0 0 1 0;" />
       <Label layoutX="134.0" layoutY="14.0" text="Crossover" />
       <Label layoutX="304.0" layoutY="14.0" text="Mutation" />
       <ComboBox fx:id="mutationComboBox" layoutX="304.0" layoutY="36.0" prefHeight="27.0" prefWidth="73.0" />
@@ -27,8 +29,8 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="27.0" layoutX="9.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="781.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#838282" height="27.0" layoutX="447.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="162.0" />
       <Label layoutX="15.0" layoutY="121.0" text="Iteration: 6318 | Best value: 10317 | #C: 1174 | #M: 12" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="27.0" layoutX="9.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="781.0" />
-      <Label fx:id="runtimeLabel" layoutX="114.0" layoutY="663.0" text="00:00" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="27.0" layoutX="8.0" layoutY="701.0" stroke="BLACK" strokeType="INSIDE" width="781.0" />
+      <Label fx:id="runtimeLabel" layoutX="114.0" layoutY="706.0" text="00:00" />
       <Label layoutX="140.0" layoutY="169.0" text="Knapsack" />
       <Label layoutX="498.0" layoutY="169.0" text="Available Items" />
        <TextField fx:id="ai1TextField" alignment="CENTER" editable="false" layoutX="409.0" layoutY="186.0" prefHeight="27.0" prefWidth="35.0" text="1" />
@@ -264,9 +266,11 @@
       <ComboBox fx:id="mutationRatioComboBox" layoutX="389.0" layoutY="36.0" prefHeight="27.0" prefWidth="109.0" />
       <ComboBox fx:id="volumeComboBox" layoutX="615.0" layoutY="36.0" prefHeight="27.0" prefWidth="73.0" />
       <Label fx:id="nameLabel" layoutX="201.0" layoutY="71.0" prefHeight="17.0" prefWidth="169.0" text="Label" />
-      <TextArea fx:id="commandTextArea" editable="false" layoutX="46.0" layoutY="599.0" prefHeight="51.0" prefWidth="719.0" />
-      <TextField fx:id="commandTextField" layoutX="46.0" layoutY="599.0" prefHeight="51.0" prefWidth="719.0" />
-      <Label layoutX="41.0" layoutY="663.0" text="Runtime:" />
+      <Label layoutX="33.0" layoutY="706.0" text="Runtime:" />
+      <TextField fx:id="commandTextField" layoutX="44.0" layoutY="653.0" prefHeight="20.0" prefWidth="757.0" style="-fx-text-box-border: transparent; -fx-faint-focus-color: transparent; -fx-focus-color: transparent; -fx-background-insets: 0, 0 0 1 00, 0 0 1 0;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextField>
    </children>
 
 </AnchorPane>
