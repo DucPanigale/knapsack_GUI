@@ -1,4 +1,6 @@
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,6 +22,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
+import java.util.Date;
 
 
 public class Main extends Application {
@@ -49,6 +52,8 @@ public class Main extends Application {
                 }
                 event.consume();
             }
+
+
         });
         StackPane root = new StackPane();
         // load scene
@@ -62,10 +67,9 @@ public class Main extends Application {
         primaryStage.setTitle("Drag Test");
         primaryStage.setScene(scene);
 
+
+
         dragTarget.setOnDragDropped(new EventHandler<DragEvent>() {
-
-
-
             @Override
             public void handle(DragEvent event) {
                 Dragboard db = event.getDragboard();
@@ -122,6 +126,38 @@ public class Main extends Application {
                             knapsackField.textProperty().setValue(Integer.toString(value));
                             knapsackPosition++;
                         }
+                        // todo: show elapsed time as runtime
+                        Label timerLabel = (Label) scene.lookup("#runtimeLabel");
+                        //timerLabel.textProperty().setValue(jsonObject.get("name").toString());
+                        long startTime = System.currentTimeMillis();
+                        //currentTimeMillis();
+
+                        new AnimationTimer() {
+                            @Override
+                            public void handle(long now) {
+                                long elapsedMillis = System.currentTimeMillis() - startTime ;
+                                long seconds = elapsedMillis / 1000;
+                                long minutes = seconds/60;
+                                seconds = seconds%60;
+
+                                String min = Long.toString(minutes);
+                                String sec = Long.toString(seconds);
+                                if (seconds<10){
+                                    sec = "0" +Long.toString(seconds);
+                                }
+                                if (minutes<10){
+                                    min = "0" + Long.toString(minutes);
+                                }
+
+                                timerLabel.setText(min + ":" + sec);
+
+
+
+
+
+                            }
+                        }.start();
+
 
                     } catch (IOException e) {
                         System.out.println(e);
@@ -136,6 +172,18 @@ public class Main extends Application {
                 event.consume();
             }
         });
+        // todo: test: button is not clickable
+        Button startButton = (Button) scene.lookup("#startButton");
+        startButton.disableProperty().setValue(false);
+        startButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                System.out.println("Started TEST");
+
+            }
+        });
+
+
+
 
 
 
