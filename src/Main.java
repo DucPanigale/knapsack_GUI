@@ -2,36 +2,29 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-//import org.controlsfx.control.textfield.TextFields;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.io.*;
-import java.net.URL;
-import java.util.ResourceBundle;
+
+//import org.controlsfx.control.textfield.TextFields;
 
 
 public class Main extends Application {
 
-/*    @FXML
-    private TextField commandInput;
-    @FXML
-    private TextArea commandHistory;*/
+    // testArray because real data was not given from other team
+    int knapsackArray[] = {1,12,17};
+    int lastKnapsackItem = -1;
+    int knapsackPosition = 1;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -60,6 +53,7 @@ public class Main extends Application {
             }
         });
 
+
         // lessons learned: NOT working with a stackpane, nothing was clickable
         AnchorPane root = new AnchorPane();
 
@@ -79,7 +73,6 @@ public class Main extends Application {
                 boolean success = false;
                 if (db.hasFiles()) {
                     // open JSON fILE
-
                     try {
                         File file = new File(db.getFiles().toString());
 
@@ -122,7 +115,7 @@ public class Main extends Application {
                         startButton.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent e) {
-
+                                start(scene);
                             }
                         });
                         Button stepButton = (Button) scene.lookup("#stepButton");
@@ -131,6 +124,7 @@ public class Main extends Application {
                             @Override
                             public void handle(ActionEvent e) {
                                 // todo: fill step button
+                                step(scene);
                             }
                         });
 
@@ -144,19 +138,6 @@ public class Main extends Application {
                                 }
                             }
                         });
-
-                        // todo: get knapsackArray
-                        int knapsackArray[] = {1,12,17};
-                        int knapsackPosition = 1;
-                        // disables available items if they exist in the knapsack array
-                        for (int value : knapsackArray){
-                            TextField textField = (TextField) scene.lookup("#ai"+value+"TextField");
-                            textField.disableProperty().setValue(true);
-                            // fill knapsack fields
-                            TextField knapsackField = (TextField) scene.lookup("#k"+knapsackPosition+"TextField");
-                            knapsackField.textProperty().setValue(Integer.toString(value));
-                            knapsackPosition++;
-                        }
 
                         // elapsed time
                         Label timerLabel = (Label) scene.lookup("#runtimeLabel");
@@ -232,36 +213,77 @@ public class Main extends Application {
     }
 
 
-    // todo: for commandTextField
     public void executePressed(Scene scene, String input, TextField textField) {
 
-            if (input.equals("start")){
-                // todo: act on input
-                System.out.println("Started");
-                // clear textfield
-                textField.setText("");
-                addCommandToHistory(input, scene);
-            }
-            else if(input.equals("step")){
-                // todo: act on input
-                System.out.println("Step");
-                // clear textfield
-                textField.setText("");
-                addCommandToHistory(input, scene);
-            }
+        if (input.equals("start")){
+            start(scene);
+            System.out.println("Started");
+            // clear textfield
+            textField.setText("");
+            addCommandToHistory(input, scene);
+        }
+        else if(input.equals("step")){
+            step(scene);
+            System.out.println("Step");
+            // clear textfield
+            textField.setText("");
+            addCommandToHistory(input, scene);
+        }
 
-            else {
-                addCommandToHistory("input is no command", scene);
-            }
+        else {
+            addCommandToHistory("input is no command", scene);
+        }
     }
 
+
+    private void step(Scene scene){
+
+        // disables available items if they exist in the knapsack array
+        for (int i=0;i<knapsackArray.length;i++) {
+            // works
+            if((lastKnapsackItem == knapsackArray[0])||(knapsackArray[i] == lastKnapsackItem) && i!=knapsackArray.length-1) {
+                TextField textField = (TextField) scene.lookup("#ai" + knapsackArray[i+1] + "TextField");
+                textField.disableProperty().setValue(true);
+                // fill knapsack fields
+                TextField knapsackField = (TextField) scene.lookup("#k" + knapsackPosition + "TextField");
+                knapsackField.textProperty().setValue(Integer.toString(knapsackArray[i+1]));
+                lastKnapsackItem = knapsackArray[i+1];
+                knapsackPosition++;
+                break;
+            }
+        }
+    }
+
+    // works
+    private void start(Scene scene){
+        knapsackPosition = 1;
+
+        // enable all fields
+        for (int i=1;i<=150;i++){
+            TextField textField = (TextField) scene.lookup("#ai"+i+"TextField");
+            textField.setDisable(false);
+        }
+        for (int i=1;i<=75;i++){
+            // empty knapsack fields
+            TextField knapsackField = (TextField) scene.lookup("#k"+i+"TextField");
+            knapsackField.textProperty().setValue("");
+        }
+
+        // set first value
+        TextField textField = (TextField) scene.lookup("#ai"+knapsackArray[0]+"TextField");
+        textField.disableProperty().setValue(true);
+        TextField knapsackField = (TextField) scene.lookup("#k"+knapsackArray[0]+"TextField");
+        knapsackField.textProperty().setValue(Integer.toString(knapsackArray[0]));
+        lastKnapsackItem = knapsackArray[0];
+        knapsackPosition++;
+    }
 
     private void addCommandToHistory(String input, Scene scene) {
         TextArea commandTextArea = (TextArea) scene.lookup("#commandTextArea");
         commandTextArea.appendText(commandTextArea.getText().isEmpty() ? input : "\n" + input);
     }
 
-    // todo: https://openjfx.io/openjfx-docs/
+    // https://openjfx.io/openjfx-docs/
     public static void main(String[] args) {
         launch(args);
     }
